@@ -18,7 +18,8 @@ data "ec_stack" "latest" {
 }
 
 module "elastic_cloud" {
-    source = "https://github.com/math280h/terraform-elastic-cloud-private-link-aws"
+    source  = "math280h/cloud-private-link-aws/elastic"
+    version = "0.0.1"
 
     vpc_id = "some-vpc-id"
     ingress_cidr = ["192.168.0.0/32"]
