@@ -31,3 +31,13 @@ module "elastic_cloud" {
     deployment_version = data.ec_stack.latest.version
 }
 ````
+
+Once deployed, the elastic deployment is reachable via the following link (On 443): `https://<name-of-elastic-deployment>.es.vpce.<region>.aws.elastic-cloud.com`
+
+### AWS VPC Configuration
+
+For this to work, you must have the DNS Hostnames and DNS Resolution enabled on your VPC. (https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating)
+
+## Resources
+https://www.elastic.co/guide/en/cloud/current/ec-traffic-filtering-vpc.html
+https://aws.amazon.com/premiumsupport/knowledge-center/route-53-fix-dns-resolution-issues/
